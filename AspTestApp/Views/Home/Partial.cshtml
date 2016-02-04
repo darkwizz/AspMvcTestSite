@@ -1,0 +1,23 @@
+﻿@using AspTestApp.Models;
+@model List<Book>
+
+
+<h1>Books grid</h1>
+
+@using (Html.BeginForm())
+{
+<table>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>
+                <input type="hidden" value="@book.Id" name="id" />
+                <input type="text" name="Name" value="@book.Name" disabled />
+                <input type="number" name="PageCount" value="@book.PageCount" disabled />
+                <input type="text" name="Author" value="@book.Author" disabled />
+                <input type="datetime" name="ReceivingDate" value="@book.ReceivingDate" disabled />
+            </td>
+        </tr>
+    }
+</table>
+}

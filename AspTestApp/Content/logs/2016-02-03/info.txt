@@ -1,0 +1,6 @@
+2016-02-03 02:58:29.6297|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-03 02:58:29.7559|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-03 18:41:35.7274|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-03 18:41:35.8700|INFO|AspTestApp.Startup|Startup configure
+

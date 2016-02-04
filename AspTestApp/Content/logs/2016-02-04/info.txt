@@ -1,0 +1,48 @@
+2016-02-04 01:16:50.2745|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 01:16:50.3766|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 02:05:46.7756|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 02:05:46.8557|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 02:08:16.5225|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 02:08:16.6015|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 02:08:41.5674|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 02:08:41.6443|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 02:18:45.8802|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 02:18:46.5343|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 13:51:16.0283|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 13:51:16.1684|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 13:53:00.3662|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 13:53:00.4446|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 17:58:39.2665|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 17:58:39.4407|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 17:59:20.6814|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 17:59:20.7873|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 18:06:03.2286|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 18:06:03.3164|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 18:10:38.7669|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 18:10:38.8600|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 18:10:58.5510|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 18:10:58.6896|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 18:19:46.5647|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 18:19:46.6447|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 18:20:13.6230|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 18:20:13.6870|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 23:02:44.5601|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 23:02:44.7683|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-04 23:03:04.9850|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-04 23:03:05.1041|INFO|AspTestApp.Startup|Startup configure
+
