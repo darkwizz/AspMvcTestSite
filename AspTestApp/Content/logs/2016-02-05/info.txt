@@ -70,3 +70,12 @@
 2016-02-05 16:42:20.2857|INFO|AspTestApp.MvcApplication|AppStart()
 2016-02-05 16:42:20.5591|INFO|AspTestApp.Startup|Startup configure
 
+2016-02-05 23:30:50.5453|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-05 23:30:50.8752|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-05 23:32:07.9096|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-05 23:32:07.9817|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-05 23:41:20.3065|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-05 23:41:20.4555|INFO|AspTestApp.Startup|Startup configure
+

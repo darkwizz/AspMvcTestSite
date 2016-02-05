@@ -38,6 +38,7 @@ function addBookForm() {
     newFormItem += (enterDateInput + '\n</div><br />');
     $('#results').append(newFormItem);
     $('span').css("margin", "1em");
+    $('forWriting').css('overflow', 'scroll');
 }
 
 function sendSaveBookAjax(url, data) {

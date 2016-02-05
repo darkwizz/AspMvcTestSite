@@ -177,12 +177,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602041558596_InitialCreate.cs" />
+    <Compile Include="Migrations\201602041558596_InitialCreate.Designer.cs">
+      <DependentUpon>201602041558596_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602051457378_RunSqlScript.cs" />
+    <Compile Include="Migrations\201602051457378_RunSqlScript.Designer.cs">
+      <DependentUpon>201602051457378_RunSqlScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Database\DbInitializer.cs" />
     <Compile Include="Models\Database\LibraryDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\InitScript.sql" />
     <Content Include="App_Data\LibraryDb.mdf" />
     <Content Include="App_Data\LibraryDb_log.ldf">
       <DependentUpon>LibraryDb.mdf</DependentUpon>
@@ -221,7 +232,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Partial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602041558596_InitialCreate.resx">
+      <DependentUpon>201602041558596_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602051457378_RunSqlScript.resx">
+      <DependentUpon>201602051457378_RunSqlScript.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

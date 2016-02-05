@@ -41,6 +41,7 @@ namespace AspTestApp.Controllers
             return PartialView("Partial", database.Books.ToList());
         }
 
+        // maybe later
         [HttpPost]
         public ActionResult EditBook(Book book)
         {
