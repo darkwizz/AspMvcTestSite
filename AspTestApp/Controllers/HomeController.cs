@@ -21,7 +21,12 @@ namespace AspTestApp.Controllers
 
         public ActionResult Partial()
         {
-            return Index();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult GetBooks()
+        {
+            return PartialView("Partial", database.Books.ToList());
         }
 
         [HttpPost]
@@ -39,7 +44,7 @@ namespace AspTestApp.Controllers
         [HttpPost]
         public ActionResult EditBook(Book book)
         {
-            if (book == null || !database.Books.Contains(book))
+            if (book == null || database.Books.Find(book.Id) == null)
             {
                 return HttpNotFound();
             }

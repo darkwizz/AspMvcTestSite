@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AspTestApp.Models
 {
@@ -12,6 +8,9 @@ namespace AspTestApp.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int PageCount { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ReceivingDate { get; set; }
         public string Author { get; set; }
     }
