@@ -3,16 +3,41 @@
     $('table').dblclick(addBookForm);
 }
 
+function setValidators() {
+    $('#enterName').change(function (nameField) {
+        nameField.valueOf();
+    })
+}
+
+function isNameValid() {
+    var nameValue = $('#enterName').val();
+    return nameValue != null && nameValue != '';
+}
+
+function isAuthorNameValid() {
+
+}
+
 function addBookForm() {
     if ($('#forWriting').length) {
         alert('Already added');
         return;
     }
-    var newFormItem = '<br /><div id="forWriting"><input type="text" name="Name" />';
-    newFormItem += '<input type="number" name="PageCount" />';
-    newFormItem += '<input type="text" name="Author" />';
-    newFormItem += '<input type="text" name="ReceivingDate" /></div><br />';
+    var enterNameInput = '<span><label for="enterName">Book Name</label>' +
+        '<input id="enterName" type="text" name="Name" /></span>';
+    var enterPageCountInput = '<span><label for="enterCount">Pages Count</label>' +
+        '<input id="enterCount" type="number" name="PageCount" min="1" value="1" /></span>';
+    var enterAuthorNameInput = '<span><label for="enterAuthor">Author</label>' +
+        '<input id="enterAuthor" type="text" name="Author" /></span>';
+    var enterDateInput = '<span><label for="enterDate">Receiving Date</label>' +
+        '<input id="enterDate" type="text" name="ReceivingDate" /></span>';
+
+    var newFormItem = '<br /><div id="forWriting">' + enterNameInput;
+    newFormItem += enterAuthorNameInput;
+    newFormItem += enterPageCountInput;
+    newFormItem += (enterDateInput + '\n</div><br />');
     $('#results').append(newFormItem);
+    $('span').css("margin", "1em");
 }
 
 function sendSaveBookAjax(url, data) {

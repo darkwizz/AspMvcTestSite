@@ -32,9 +32,9 @@ namespace AspTestApp.Controllers
         [HttpPost]
         public ActionResult SaveBook(Book book)
         {
-            if (book == null)
+            if (book == null || !ModelState.IsValid)
             {
-                return HttpNotFound();
+                return HttpNotFound("Invalid input data. Missing fields");
             }
             database.Books.Add(book);
             database.SaveChanges();

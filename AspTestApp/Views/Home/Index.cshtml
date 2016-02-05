@@ -12,31 +12,19 @@
 </script>
 
 
-<div id="results"></div>
+<div id="results" style="align-items: center"></div>
 <br />
+
+<input type="button" value="Add" onclick="onAddButtonClick()" />
+
+<br />
+<br />
+
 <input type="button" value="Add New" onclick="addBookForm()" />
-<br />
-<br />
 
 <script>
     function onAddButtonClick() {
-        alert('HERE');
-        data = {
-            Name: $('#forWriting').find("input[name*='Name']").val(),
-            PageCount: $('#forWriting').find("input[name*='PageCount']").val(),
-            Author: $('#forWriting').find("input[name*='Author']").val(),
-            ReceivingDate: $('#forWriting').find("input[name*='ReceivingDate']").val()
-        };
-        alert(data);
+        data = $('#bookForm').serialize();
         sendSaveBookAjax('@Url.Action("SaveBook", "Home")', data);
     }
 </script>
-<div id="bookForm">
-    <input type="button" value="Add" onclick="onAddButtonClick()" />
-</div>
-
-
-@*@using (Ajax.BeginForm("SaveBook", new AjaxOptions() { UpdateTargetId = "results", OnSuccess = "onAjaxSuccess" }))
-{
-    <input type="submit" value="Add" />
-}*@
