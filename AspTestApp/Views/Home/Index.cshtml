@@ -1,36 +1,14 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@Scripts.Render("~/Scripts/requests-and-handlers.js")
 
 <h2>Index</h2>
 
 <script>
-    $.ajax({
-        url: '@Url.Action("GetBooks", "Home")',
-        type: 'GET',
-        success: function (data) {
-            $('#results').html(data);
-            $('table').dblclick(addBookForm);
-        },
-        error: function (data) {
-            alert('FAIL');
-        }
-    });
-
-    function addBookForm() {
-        if ($('#forWriting').length) {
-            alert('Already added');
-            return;
-        }
-        var newFormItem = '<tr id="forWriting"><td><input type="text" name="Name" /></td>';
-        newFormItem += '<td><input type="number" name="PageCount" /></td>';
-        newFormItem += '<td><input type="text" name="Author" /></td>';
-        newFormItem += '<td><input type="text" name="ReceivingDate" /></td></tr>';
-        $('tbody').append(newFormItem).slideDown(6000);
-    }
+    sendGetListAjax('@Url.Action("GetBooks", "Home")');
 </script>
 
 
@@ -39,7 +17,26 @@
 <input type="button" value="Add New" onclick="addBookForm()" />
 <br />
 <br />
-@using (Ajax.BeginForm("AddBook", new AjaxOptions() { UpdateTargetId = "results" }))
+
+<script>
+    function onAddButtonClick() {
+        alert('HERE');
+        data = {
+            Name: $('#forWriting').find("input[name*='Name']").val(),
+            PageCount: $('#forWriting').find("input[name*='PageCount']").val(),
+            Author: $('#forWriting').find("input[name*='Author']").val(),
+            ReceivingDate: $('#forWriting').find("input[name*='ReceivingDate']").val()
+        };
+        alert(data);
+        sendSaveBookAjax('@Url.Action("SaveBook", "Home")', data);
+    }
+</script>
+<div id="bookForm">
+    <input type="button" value="Add" onclick="onAddButtonClick()" />
+</div>
+
+
+@*@using (Ajax.BeginForm("SaveBook", new AjaxOptions() { UpdateTargetId = "results", OnSuccess = "onAjaxSuccess" }))
 {
     <input type="submit" value="Add" />
-}
+}*@
