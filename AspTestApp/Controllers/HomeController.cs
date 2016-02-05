@@ -40,35 +40,5 @@ namespace AspTestApp.Controllers
             database.SaveChanges();
             return PartialView("Partial", database.Books.ToList());
         }
-
-        // maybe later
-        [HttpPost]
-        public ActionResult EditBook(Book book)
-        {
-            if (book == null || database.Books.Find(book.Id) == null)
-            {
-                return HttpNotFound();
-            }
-            database.Entry(book).State = EntityState.Modified;
-            database.SaveChanges();
-            return PartialView("Partial", database.Books.ToList());
-        }
-
-        [HttpPost]
-        public ActionResult DeleteBook(int? id)
-        {
-            if (id == null)
-            {
-                return HttpNotFound();
-            }
-            Book book = database.Books.Find(id);
-            if (book == null)
-            {
-                return HttpNotFound();
-            }
-            database.Books.Remove(book);
-            database.SaveChanges();
-            return PartialView("Partial", database.Books.ToList());
-        }
     }
 }
