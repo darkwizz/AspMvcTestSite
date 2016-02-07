@@ -24,6 +24,10 @@ namespace AspTestApp.Models.Database
 
         public override void InitializeDatabase(LibraryDbContext context)
         {
+            if (context.Database.Exists())
+            {
+                return;
+            }
             try
             {
                 context.Database.CreateIfNotExists();

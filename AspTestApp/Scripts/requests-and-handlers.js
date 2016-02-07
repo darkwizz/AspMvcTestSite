@@ -3,6 +3,10 @@
     $('table').dblclick(addBookForm);
 }
 
+function onAddFormSubmit() {
+    var form = $('#saveBookForm');
+}
+
 function setValidators() {
     $('#enterName').change(function (nameField) {
         nameField.valueOf();
@@ -15,7 +19,6 @@ function isNameValid() {
 }
 
 function isAuthorNameValid() {
-
 }
 
 function addBookForm() {
@@ -23,7 +26,7 @@ function addBookForm() {
         alert('Already added');
         return;
     }
-    var enterNameInput = '<span><label for="enterName">Book Name</label>' +
+    var enterNameInput = '<div id="forWriting"><span><label for="enterName">Book Name</label>' +
         '<input id="enterName" type="text" name="Name" /></span>';
     var enterPageCountInput = '<span><label for="enterCount">Pages Count</label>' +
         '<input id="enterCount" type="number" name="PageCount" min="1" value="1" /></span>';
@@ -31,14 +34,15 @@ function addBookForm() {
         '<input id="enterAuthor" type="text" name="Author" /></span>';
     var enterDateInput = '<span><label for="enterDate">Receiving Date</label>' +
         '<input id="enterDate" type="text" name="ReceivingDate" /></span>';
+    var submitInput = '<br /><input type="submit" value="Save Book" /></div>';
 
-    var newFormItem = '<br /><div id="forWriting">' + enterNameInput;
+    var newFormItem = enterNameInput;
     newFormItem += enterAuthorNameInput;
     newFormItem += enterPageCountInput;
-    newFormItem += (enterDateInput + '\n</div><br />');
-    $('#results').append(newFormItem);
+    newFormItem += enterDateInput;
+    newFormItem += submitInput;
+    $('#saveBookForm').append(newFormItem);
     $('span').css("margin", "1em");
-    $('forWriting').css('overflow', 'scroll');
 }
 
 function sendSaveBookAjax(url, data) {
@@ -49,6 +53,7 @@ function sendSaveBookAjax(url, data) {
         success: onAjaxSuccess,
         error: function (data) {
             alert('FAIL');
+            removeFillBookInfoFields();
         }
     })
 }
@@ -60,6 +65,14 @@ function sendGetListAjax(url) {
         success: onAjaxSuccess,
         error: function (data) {
             alert('FAIL');
+            removeFillBookInfoFields();
         }
     });
+}
+
+function removeFillBookInfoFields() {
+    var forWriting = $('#forWriting');
+    if (forWriting) {
+        $('#forWriting').remove();
+    }
 }
