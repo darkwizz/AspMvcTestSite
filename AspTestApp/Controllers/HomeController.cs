@@ -40,5 +40,16 @@ namespace AspTestApp.Controllers
             database.SaveChanges();
             return PartialView("Partial", database.Books.ToList());
         }
+
+        [HttpPost]
+        public ActionResult ClearBooks()
+        {
+            foreach (var book in database.Books)
+            {
+                database.Entry(book).State = EntityState.Deleted;
+            }
+            database.SaveChanges();
+            return PartialView("Partial", database.Books.ToList());
+        }
     }
 }

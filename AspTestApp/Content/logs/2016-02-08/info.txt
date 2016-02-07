@@ -1,0 +1,18 @@
+2016-02-08 01:13:44.3353|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:13:44.8772|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-08 01:22:23.5420|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:22:23.6606|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-08 01:26:51.8139|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:26:51.9420|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-08 01:36:13.3342|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:36:13.4122|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-08 01:36:27.2293|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:36:27.3134|INFO|AspTestApp.Startup|Startup configure
+
+2016-02-08 01:42:31.7249|INFO|AspTestApp.MvcApplication|AppStart()
+2016-02-08 01:42:32.5296|INFO|AspTestApp.Startup|Startup configure
+

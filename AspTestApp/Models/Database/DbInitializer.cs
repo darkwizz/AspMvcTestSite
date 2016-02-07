@@ -24,13 +24,13 @@ namespace AspTestApp.Models.Database
 
         public override void InitializeDatabase(LibraryDbContext context)
         {
-            if (context.Database.Exists())
-            {
-                return;
-            }
             try
             {
                 context.Database.CreateIfNotExists();
+                if (context.Books.Count() != 0)
+                {
+                    return;
+                }
                 string sqlInitQuery = new StreamReader(
                     new FileStream(appDataPath + "InitScript.sql", FileMode.Open))
                     .ReadToEnd();

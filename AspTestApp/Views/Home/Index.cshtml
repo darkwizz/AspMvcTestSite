@@ -28,11 +28,16 @@
 <br />
 <br />
 
-<input type="button" value="Add New" onclick="addBookForm()" />
+<input type="button" class="btn" value="Add New" onclick="addBookForm()" />
+<input type="button" class="btn" value="Clear Books List" onclick="onClearBooksClick()" />
 
 <script>
     function onSaveBookButtonClick() {
         data = $('#saveBookForm').serialize();
-        sendSaveBookAjax('@Url.Action("SaveBook", "Home")', data);
+        sendAjax('@Url.Action("SaveBook", "Home")', data);
+    }
+
+    function onClearBooksClick() {
+        sendAjax('@Url.Action("ClearBooks", "Home")', null);
     }
 </script>
